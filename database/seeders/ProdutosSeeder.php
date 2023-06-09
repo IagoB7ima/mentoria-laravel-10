@@ -8,12 +8,10 @@ use Illuminate\Database\Seeder;
 
 class ProdutosSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+
     public function run(): void
     {
-        Produto::created(
+        Produto::create(
             [
                 'nome' => 'Victor Padovam',
                 'valor' => '20.00'

@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'laravel/laravel',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '69ed26e800189f72b12a113c0d3931ff2799077d',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -113,9 +113,9 @@
             'dev_requirement' => false,
         ),
         'guzzlehttp/guzzle' => array(
-            'pretty_version' => '7.6.0',
-            'version' => '7.6.0.0',
-            'reference' => '733dd89533dd371a0987172727df15f500dab0ef',
+            'pretty_version' => '7.5.1',
+            'version' => '7.5.1.0',
+            'reference' => 'b964ca597e86b752cd994f27293e9fa6b6a95ed9',
             'type' => 'library',
             'install_path' => __DIR__ . '/../guzzlehttp/guzzle',
             'aliases' => array(),
@@ -371,9 +371,9 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '69ed26e800189f72b12a113c0d3931ff2799077d',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
