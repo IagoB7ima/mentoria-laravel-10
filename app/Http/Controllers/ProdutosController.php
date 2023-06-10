@@ -46,4 +46,23 @@ class ProdutosController extends Controller
         // mostrar dados
         return view('pages.produtos.create');
     }
+
+    public function atualizarProduto(FormRequestProduto $request, $id)
+    {
+        if ($request->method() == "PUT") {
+            // atulaliza os dados
+            $data = $request->all();
+            $componentes = new Componentes();
+            $data['valor'] = $componentes->formatacaoMascaraDinheiroDecimal($data['valor']);
+            $buscaRegistro = Produto::find($id);
+            $buscaRegistro->update($data);
+
+            return redirect()->route('produto.index');
+        }
+
+        // mostrar dados
+        $findProduto = Produto::where('id', '=', $id)->first();
+
+        return view('pages.produtos.atualiza', compact('findProduto'));
+    }
 }
