@@ -8,26 +8,27 @@ use Illuminate\Database\Seeder;
 
 class ClientesSeeder extends Seeder
 {
+
     public function run(): void
     {
         Cliente::create(
             [
                 'nome' => 'Victor Padovam',
                 'email' => 'v@gmail.com',
-                'endereco' => 'Rua x',
-                'logradouro' => 'Rua x',
-                'cep' => '00000000',
-                'bairro' => 'Jardim x',
+                'endereco' => 'rua x',
+                'logradouro' => 'rua x',
+                'cep' => '217900',
+                'bairro' => 'jardim x',
             ]
         );
         Cliente::create(
             [
-                'nome' => 'Iago Batista ',
-                'email' => 'i@gmail.com',
-                'endereco' => 'Rua Y',
-                'logradouro' => 'Rua Y',
-                'cep' => '00000000',
-                'bairro' => 'Jardim Y',
+                'nome' => 'Teste Padovam',
+                'email' => 'v@gmail.com',
+                'endereco' => 'rua x',
+                'logradouro' => 'rua x',
+                'cep' => '217900',
+                'bairro' => 'jardim x',
             ]
         );
     }

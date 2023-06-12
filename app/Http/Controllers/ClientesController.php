@@ -38,6 +38,7 @@ class ClientesController extends Controller
             // cria os dados
             $data = $request->all();
             Cliente::create($data);
+
             Toastr::success('Dados gravados com sucesso.');
             return redirect()->route('clientes.index');
         }
@@ -55,6 +56,7 @@ class ClientesController extends Controller
             $buscaRegistro = Cliente::find($id);
             $buscaRegistro->update($data);
 
+            Toastr::success('Dados atualizados com sucesso.');
             return redirect()->route('produto.index');
         }
         $findProduto = Cliente::where('id', '=', $id)->first();

@@ -4,7 +4,7 @@ function deleteRegistroPaginacao(rotaUrl, idDoRegistro) {
             url: rotaUrl,
             method: 'DELETE',
             headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-            data: {
+            data: { 
                 id: idDoRegistro,
             },
             beforeSend: function () {
@@ -29,12 +29,13 @@ function deleteRegistroPaginacao(rotaUrl, idDoRegistro) {
 
 $('#mascara_valor').mask('#.##0,00', { reverse: true });
 
+
 $("#cep").blur(function () {
     var cep = $(this).val().replace(/\D/g, '');
     if (cep != "") {
         var validacep = /^[0-9]{8}$/;
         if (validacep.test(cep)) {
-            $("#logradouro").val(" ");
+            $("#logradouro").val("");
             $("#bairro").val(" ");
             $("#endereco").val(" ");
             $.getJSON("https://viacep.com.br/ws/" + cep + "/json/?callback=?", function (dados) {
