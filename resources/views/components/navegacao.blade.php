@@ -14,13 +14,13 @@
                  </a>
              </li>
              <li class="nav-item">
-                 <a class="nav-link" href=" {{ route('produto.index') }}">
+                 <a class="nav-link" href=" {{ route('produto.index') }} ">
                      <span data-feather="shopping-cart" class="align-text-bottom"></span>
                      Produto
                  </a>
              </li>
              <li class="nav-item">
-                 <a class="nav-link" href="#">
+                 <a class="nav-link" href=" {{ route('clientes.index') }} ">
                      <span data-feather="users" class="align-text-bottom"></span>
                      Clientes
                  </a>
