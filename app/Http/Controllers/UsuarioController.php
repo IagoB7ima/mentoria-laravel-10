@@ -52,11 +52,12 @@ class UsuarioController extends Controller
         if ($request->method() == "PUT") {
             // atualiza os dados
             $data = $request->all();
+            $data['password'] = Hash::make($data['password']);
             $buscaRegistro = User::find($id);
             $buscaRegistro->update($data);
 
             Toastr::success('Dados atualizados com sucesso.');
-            return redirect()->route('produto.index');
+            return redirect()->route('usuario.index');
         }
         $findUsuario = User::where('id', '=', $id)->first();
 

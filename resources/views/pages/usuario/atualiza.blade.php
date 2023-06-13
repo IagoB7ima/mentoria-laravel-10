@@ -1,26 +1,34 @@
 @extends('index')
 
 @section('content')
-    <form class="form" method="POST" action="{{ route('atualizar.produto', $findProduto->id) }}">
+    <form class="form" method="POST" action="{{ route('atualizar.usuario', $findUsuario->id) }}">
         @csrf
         @method('PUT')
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-            <h1 class="h2">Editar Produto</h1>
+            <h1 class="h2">Editar Usuário</h1>
         </div>
         <div class="mb-3">
             <label class="form-label">Nome</label>
-            <input type="text" value=" {{ isset($findProduto->nome) ? $findProduto->nome : old('nome') }} "
-                class="form-control @error('nome') is-invalid @enderror" name="nome">
-            @if ($errors->has('nome'))
-                <div class="invalid-feedback"> {{ $errors->first('nome') }}</div>
+            <input type="text" value=" {{ isset($findUsuario->name) ? $findUsuario->name : old('name') }} " class="form-control @error('name') is-invalid @enderror"
+                name="name">
+            @if ($errors->has('name'))
+                <div class="invalid-feedback"> {{ $errors->first('name') }}</div>
             @endif
         </div>
         <div class="mb-3">
-            <label class="form-label">Valor</label>
-            <input id='mascara_valor' value=" {{ isset($findProduto->valor) ? $findProduto->valor : old('valor') }} "
-                class="form-control @error('valor') is-invalid @enderror" name="valor">
-            @if ($errors->has('valor'))
-                <div class="invalid-feedback"> {{ $errors->first('valor') }}</div>
+            <label class="form-label">E-mail</label>
+            <input value=" {{ isset($findUsuario->email) ? $findUsuario->email: old('email') }} " class="form-control @error('email') is-invalid @enderror"
+                name="email">
+            @if ($errors->has('email'))
+                <div class="invalid-feedback"> {{ $errors->first('email') }}</div>
+            @endif
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Nova Senha</label>
+            <input type="password" class="form-control @error('password') is-invalid @enderror"
+                name="password">
+            @if ($errors->has('password'))
+                <div class="invalid-feedback"> {{ $errors->first('password') }}</div>
             @endif
         </div>
 
